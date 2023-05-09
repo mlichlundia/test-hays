@@ -1,0 +1,13 @@
+@use '../../../../../../styles/styles' as *;
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 rem(12);
+  background: color(neutral-700);
+
+  @include m {
+    padding: 0 rem(64);
+  }
+}

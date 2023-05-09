@@ -1,0 +1,18 @@
+@use 'src/styles/styles' as *;
+
+button {
+  padding: rem(12) rem(16);
+  font-size: font(14);
+  font-weight: 800;
+  color: color(accent-900);
+  white-space: nowrap;
+
+  &:hover {
+    color: color(accent-800);
+  }
+
+  @include m {
+    padding: rem(16) rem(24);
+    font-size: font(16);
+  }
+}
