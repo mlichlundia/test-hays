@@ -1,0 +1,9 @@
+@use 'src/styles/styles' as *;
+
+main {
+  padding: rem(12);
+
+  @include m {
+    padding: rem(64);
+  }
+}

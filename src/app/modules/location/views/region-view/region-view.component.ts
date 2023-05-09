@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
+import { REGION_MOCK } from '../../mock/regions.mock'
+import { RegionInterface } from '../../types-interfaces/region.interface'
 
 @Component({
   selector: 'app-region-view',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./region-view.component.scss']
 })
 export class RegionViewComponent {
-
+  public regions: RegionInterface[] = REGION_MOCK
 }

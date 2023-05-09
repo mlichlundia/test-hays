@@ -1,1 +1,7 @@
-<p>region-view works!</p>
+<ul>
+  <li *ngFor="let region of regions">
+    <a [routerLink]="['/', 'countries']">
+      <app-region-tile [region]="region"></app-region-tile>
+    </a>
+  </li>
+</ul>
