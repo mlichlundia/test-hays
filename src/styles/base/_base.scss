@@ -1,0 +1,16 @@
+@use "../utils/_mixins.scss" as *;
+@use "../utils/_functions.scss" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+html {
+  @include generate-fonts;
+  @include generate-colors;
+  @include generate-breakpoints;
+}
+
+body {
+  color: color(text-1);
+  background: color(bg);
+  font-family: 'Inter', Arial, sans-serif;
+}

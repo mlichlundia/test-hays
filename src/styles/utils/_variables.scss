@@ -1,0 +1,29 @@
+$font-base: 16;
+$fonts: (64, 40, 24, 20, 18, 16, 14, 12);
+
+$colors: (
+  white: #fff,
+  black: #000,
+  neutral-200: #2f323b,
+  neutral-300: #676d73,
+  neutral-400: #999fa4,
+  neutral-600: #c1c7ce,
+  neutral-700: #edeff1,
+  neutral-800: #fcfdfe,
+  neutral-900: #f7f9fb,
+  accent-800: #227fe8,
+  accent-900: #065fc0,
+  bg: var(--color-neutral-900),
+  icon: var(--color-neutral-600),
+  heading: var(--color-neutral-200),
+  text-1: var(--color-black),
+);
+
+$breakpoints: (
+  xs: 482px,
+  s: 640px,
+  m: 992px,
+  l: 1280px,
+  xl: 1680px,
+  xxl: 1920px,
+);
