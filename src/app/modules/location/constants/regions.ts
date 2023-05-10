@@ -1,6 +1,6 @@
 import { RegionInterface } from '../types-interfaces/region.interface'
 
-export const REGION_MOCK: RegionInterface[] =
+export const REGIONS: RegionInterface[] =
   [
     {
       name: 'africa',

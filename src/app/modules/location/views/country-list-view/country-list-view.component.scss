@@ -1,0 +1,36 @@
+@use "src/styles/styles" as *;
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(8);
+  margin-top: rem(24);
+
+  @include s {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  > :nth-child(n) a {
+    display: flex;
+    align-items: center;
+    gap: rem(12);
+    padding: rem(12);
+    background: color(neutral-700);
+    border-radius: rem(8);
+
+    &:hover {
+      background: color(neutral-600);
+    }
+  }
+
+  &__title {
+    color: color(heading);
+  }
+
+  &__flag {
+    img {
+      width: rem(40);
+      height: rem(24);
+    }
+  }
+}

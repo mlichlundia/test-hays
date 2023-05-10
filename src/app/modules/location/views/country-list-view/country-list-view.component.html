@@ -1,1 +1,12 @@
-<p>country-list-view works!</p>
+<h1 class="list__title">Region: {{region?.label}}</h1>
+<ul class="list">
+  <li *ngFor="let country of countries | async">
+    <a [routerLink]="['/', 'country', country.name.common]">
+      <picture class="list__flag">
+        <source [src]="country.flags.svg" type="image/svg">
+        <img [src]="country.flags.png" [alt]="country.flags.alt" width="40" height="auto">
+      </picture>
+      {{country.name.common}}
+    </a>
+  </li>
+</ul>

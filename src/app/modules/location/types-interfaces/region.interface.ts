@@ -4,4 +4,4 @@ export interface RegionInterface {
   img: string
 }
 
-type RegionType = 'africa' | 'america' | 'asia' | 'europe' | 'oceania'
+export type RegionType = 'africa' | 'america' | 'asia' | 'europe' | 'oceania'

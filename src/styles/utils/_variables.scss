@@ -1,13 +1,13 @@
 $font-base: 16;
-$fonts: (64, 40, 24, 20, 18, 16, 14);
+$fonts: (48, 40, 24, 20, 18, 16, 14, 12);
 
 $colors: (
-  white: #fff,
-  black: #000,
+  'white': #fff,
+  'black': #000,
   neutral-200: #2f323b,
   neutral-300: #676d73,
   neutral-400: #999fa4,
-  neutral-600: #c1c7ce,
+  neutral-600: #dcdfe5,
   neutral-700: #edeff1,
   neutral-800: #fcfdfe,
   neutral-900: #f7f9fb,

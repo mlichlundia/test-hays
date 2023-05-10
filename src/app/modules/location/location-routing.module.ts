@@ -8,7 +8,7 @@ const routes: Routes = [
   {
     path: '', children: [
       {path: '', component: RegionViewComponent},
-      {path: 'countries', component: CountryListViewComponent},
+      {path: 'region/:name', component: CountryListViewComponent},
       {path: 'country/:name', component: CountryViewComponent}
     ]
   }

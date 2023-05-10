@@ -26,7 +26,7 @@
     @return var(--color-#{$value});
   } @else {
     @warn 'This #{$value} doesn\'t exist';
-    @return var(--invalid-color-provided)
+    @return var(--color-invalid)
   }
 }
 
