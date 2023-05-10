@@ -3,5 +3,6 @@
   <app-country-card [country]="country"></app-country-card>
 </ng-container>
 <ng-template #loading>
-  loading...
+  <ngx-skeleton-loader [theme]="{height: '64px', 'margin-bottom': '24px'}"></ngx-skeleton-loader>
+  <app-card-skeleton></app-card-skeleton>
 </ng-template>

@@ -41,12 +41,12 @@
 
     span {
       display: block;
-      width: rem(132);
+      min-width: rem(132);
       font-weight: 600;
       color: color(neutral-200);
 
       @include m {
-        width: rem(180);
+        min-width: rem(180);
       }
     }
   }

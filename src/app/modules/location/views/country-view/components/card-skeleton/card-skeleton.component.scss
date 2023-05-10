@@ -1,0 +1,43 @@
+@use 'src/styles/styles' as *;
+
+:host {
+  display: block;
+  border-radius: rem(12);
+  background: color(neutral-600);
+}
+
+.card {
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: rem(24);
+    padding: rem(24);
+  }
+
+  &__code {
+    width: rem(80);
+    height: rem(64);
+
+    @include m {
+      width: rem(200);
+      height: rem(120);
+    }
+  }
+
+  &__flag {
+    width: rem(100);
+    height: rem(72);
+    border-radius: rem(8);
+    overflow: hidden;
+
+    @include m {
+      width: rem(320);
+      height: rem(200);
+      border-radius: rem(8);
+    }
+  }
+
+  &__list li {
+
+  }
+}
