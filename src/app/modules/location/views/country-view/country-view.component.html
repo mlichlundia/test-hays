@@ -1,1 +1,7 @@
-<p>country-view works!</p>
+<ng-container *ngIf="country; else loading">
+  <h1>{{country.name.common}}</h1>
+  <app-country-card [country]="country"></app-country-card>
+</ng-container>
+<ng-template #loading>
+  loading...
+</ng-template>

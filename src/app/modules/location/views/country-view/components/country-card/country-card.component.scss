@@ -1,0 +1,64 @@
+@use 'src/styles/styles' as *;
+
+:host {
+  display: block;
+  border-radius: rem(12);
+  background: color(neutral-700);
+}
+
+.card {
+  &__code {
+    font-size: rem(80);
+    font-weight: 800;
+  }
+
+  &__flag {
+    img {
+      width: rem(100);
+      height: rem(72);
+      border-radius: rem(8);
+
+      @include m {
+        width: rem(320);
+        height: rem(200);
+        border-radius: rem(8);
+      }
+    }
+  }
+
+  &__point {
+    display: flex;
+    padding: rem(12);
+
+    @include m {
+      padding: rem(12) rem(24);
+    }
+
+    &_positive {
+      font-weight: 600;
+      color: color(positive-900);
+    }
+
+    span {
+      display: block;
+      width: rem(132);
+      font-weight: 600;
+      color: color(neutral-200);
+
+      @include m {
+        width: rem(180);
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: rem(24);
+    padding: rem(24);
+  }
+
+  &__list > :nth-child(odd) {
+    background: color(neutral-600);
+  }
+}

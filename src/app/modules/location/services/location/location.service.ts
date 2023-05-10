@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core'
-import { Observable } from 'rxjs'
+import { map, Observable } from 'rxjs'
 import { REGIONS } from '../../constants/regions'
-import { GET_COUNTRIES_URL } from '../../constants/urls'
+import { GET_COUNTRIES_URL, GET_COUNTRY_URL } from '../../constants/urls'
 import { CountryInterface } from '../../types-interfaces/country.interface'
 import { RegionInterface, RegionType } from '../../types-interfaces/region.interface'
 
@@ -16,5 +16,16 @@ export class LocationService {
 
   public getCountries(region: RegionType): Observable<CountryInterface[]> {
     return this.http.get<CountryInterface[]>(GET_COUNTRIES_URL + region)
+  }
+
+  public getCountry(countryCode: string): Observable<CountryInterface> {
+    return this.http.get<CountryInterface[]>(GET_COUNTRY_URL + countryCode)
+      .pipe(map((countries: CountryInterface[]) => {
+        const currentCountry = countries[0]
+
+        currentCountry.currencies = [...Object.values(currentCountry.currencies)]
+
+        return currentCountry
+      }))
   }
 }

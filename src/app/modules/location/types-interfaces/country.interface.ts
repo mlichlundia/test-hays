@@ -3,7 +3,7 @@ import { FlagInterface } from './flag.interface'
 
 export interface CountryInterface {
   name: { common: string; official: string };
-  cioc: string;
+  cca2: string;
   area: number;
   capital: string[];
   independent: boolean;
