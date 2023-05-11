@@ -1,0 +1,7 @@
+@use '../../../../styles/styles' as *;
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: rem(12);
+}

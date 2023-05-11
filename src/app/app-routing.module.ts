@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
+import { RegionViewComponent } from './modules/region/views/region-view.component'
 
 const routes: Routes = [
   {
     path: '', children: [
-      {path: '', loadChildren: () => import('src/app/modules/location/location.module').then(m => m.LocationModule)}
+      {path: '', component: RegionViewComponent},
+      {path: ':name', loadChildren: () => import('src/app/modules/country/country.module').then(m => m.CountryModule)}
     ]
   }
 ]
