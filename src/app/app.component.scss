@@ -1,6 +1,7 @@
 @use 'src/styles/styles' as *;
 
 main {
+  min-height: var(--main-height);
   padding: rem(12);
 
   @include m {

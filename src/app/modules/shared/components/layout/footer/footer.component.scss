@@ -1,10 +1,9 @@
 @use 'src/styles/styles' as *;
 
-footer {
+.footer {
+  height: var(--footer-height);
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  padding: rem(24) rem(12);;
+  padding: rem(24) rem(12);
   font-size: font(12);
   background: color(neutral-200);
   color: color(neutral-400);
@@ -12,5 +11,12 @@ footer {
   @include m {
     padding: rem(24) rem(64);
     font-size: font(14);
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
   }
 }

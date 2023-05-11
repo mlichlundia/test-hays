@@ -2,6 +2,10 @@
 @use "../utils/_functions.scss" as *;
 
 html {
+  --header-height: #{rem(64)};
+  --footer-height: #{rem(100)};
+  --main-height: calc(100vh - var(--header-height) - var(--footer-height));
+
   @include generate-fonts;
   @include generate-colors;
   @include generate-breakpoints;
