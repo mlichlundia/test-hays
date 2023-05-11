@@ -1,7 +1,7 @@
 <h1 class="list__title">Region: {{region?.label}}</h1>
 <ul class="list">
-  <ng-container *ngIf="countries; else loading">
-    <li *ngFor="let country of countries | async">
+  <ng-container *ngIf="countries$; else loading">
+    <li *ngFor="let country of countries$ | async">
       <a [routerLink]="['./', country.cca2]">
         <picture class="list__flag">
           <source [src]="country.flags.svg" type="image/svg">

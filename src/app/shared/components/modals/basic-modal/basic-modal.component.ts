@@ -10,6 +10,7 @@ import { ModalService } from '../../../services/modal/modal.service'
 })
 export class BasicModalComponent implements OnInit, OnDestroy {
   private unsubscribe$: Subject<void> = new Subject<void>()
+
   public MODALS = Modals
 
   constructor(public modalService: ModalService) {}
