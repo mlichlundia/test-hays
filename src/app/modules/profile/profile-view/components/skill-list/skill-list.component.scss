@@ -1,0 +1,8 @@
+@use "../../../../../../styles/styles" as *;
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(4);
+  margin-top: rem(12);
+}

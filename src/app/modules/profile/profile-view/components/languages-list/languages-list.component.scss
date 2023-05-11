@@ -1,0 +1,9 @@
+@use '../../../../../../styles/styles' as *;
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: rem(8);
+  margin: rem(12) 0 0 rem(20);
+  list-style-type: square;
+}

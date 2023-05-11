@@ -1,1 +1,21 @@
-<p>profile-view works</p>
+<header>
+  <picture class="profile__image">
+    <source [srcset]="'assets/profile/' + profile.imgName + '.webp'" type="image/webp">
+    <img [src]="'assets/profile/' + profile.imgName  + '.png'" alt="avatar">
+  </picture>
+  <section class="profile__main-info">
+    <p class="profile__title">{{profile.title}}</p>
+    <h3>{{profile.name}} {{profile.lastName}}</h3>
+    <p>{{profile.summary}}</p>
+  </section>
+</header>
+<div class="profile__content">
+  <div>
+    <app-contacts-list [contacts]="profile.contacts"></app-contacts-list>
+    <app-skill-list [skills]="profile.skills"></app-skill-list>
+    <app-languages-list [languages]="profile.languages"></app-languages-list>
+  </div>
+  <div>
+    <app-work-expirience-list [list]="profile.workExperience"></app-work-expirience-list>
+  </div>
+</div>

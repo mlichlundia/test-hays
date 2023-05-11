@@ -1,0 +1,22 @@
+@use '../../../../../../styles/styles' as *;
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: rem(8);
+  margin-top: rem(12);
+}
+
+li {
+  >:first-child {
+    font-weight: 600;
+  }
+}
+
+a {
+  color: color(accent-900);
+
+  &:hover {
+    color: color(accent-800);
+  }
+}

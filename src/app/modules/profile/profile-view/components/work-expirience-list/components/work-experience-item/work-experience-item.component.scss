@@ -1,0 +1,21 @@
+@use "src/styles/styles" as *;
+
+ul {
+  list-style-type: square;
+  margin: rem(12) 0 0 rem(20);
+}
+
+.work {
+  &__company, &__title, &__achievements p {
+    font-weight: 600;
+  }
+
+  &__company {
+    font-size: font(20);
+  }
+
+  &__title {
+    margin: rem(4) 0 rem(12);
+    color: color(accent-900);
+  }
+}

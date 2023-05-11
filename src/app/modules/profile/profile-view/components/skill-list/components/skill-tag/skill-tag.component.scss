@@ -1,0 +1,11 @@
+@use "../../../../../../../../styles/styles" as *;
+
+:host {
+  display: block;
+  width: fit-content;
+  padding: rem(8) rem(6);
+  border-radius: rem(6);
+  background: rgba(color-hex(accent-900), .1);
+  color: color(accent-900);
+  font-size: font(14);
+}

@@ -1,0 +1,12 @@
+<h4>Contacts</h4>
+<ul>
+  <li *ngFor="let contact of contacts">
+    <span>{{contact.label}}: </span>
+    <a *ngIf="contact.src; else value" [href]="contact.src" target="_blank">
+      <span>{{contact.value}}</span>
+    </a>
+    <ng-template #value>
+      <span>{{contact.value}}</span>
+    </ng-template>
+  </li>
+</ul>

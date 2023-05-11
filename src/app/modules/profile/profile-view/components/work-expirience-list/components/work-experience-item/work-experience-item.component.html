@@ -1,0 +1,8 @@
+<p class="work__company">{{work.company}}</p>
+<p class="work__title">{{work.title}}</p>
+<div class="work__achievements">
+  <p>Achievements</p>
+  <ul>
+    <li *ngFor="let achievement of work.achievements">{{achievement}}</li>
+  </ul>
+</div>

@@ -1,0 +1,76 @@
+@use 'src/styles/styles' as *;
+
+:host {
+  --left-column-width: #{rem(220)};
+
+  display: block;
+  width: rem(300);
+
+  @include s {
+    width: rem(400);
+  }
+
+  @include m {
+    width: rem(640);
+  }
+
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: rem(24);
+  gap: rem(24);
+
+  @include m {
+    flex-direction: row;
+  }
+}
+
+.profile {
+  &__image {
+    display: block;
+    flex: none;
+    width: var(--left-column-width);
+    border-radius: rem(8);
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  &__main-info {
+    h3 {
+      margin: rem(12) 0 rem(6);
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: color(accent-900);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+
+    @include m {
+      flex-direction: row;
+    }
+
+    > :first-child {
+      width: 100%;
+      flex: none;
+
+      @include m {
+        width: var(--left-column-width);
+      }
+    }
+
+    > :nth-child(n) {
+      display: flex;
+      flex-direction: column;
+      gap: rem(24);
+    }
+  }
+}
