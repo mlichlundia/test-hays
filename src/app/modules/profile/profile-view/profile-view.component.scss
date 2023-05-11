@@ -7,13 +7,12 @@
   width: rem(300);
 
   @include s {
-    width: rem(400);
+    width: rem(350);
   }
 
-  @include m {
-    width: rem(640);
+  @include l {
+    width: rem(600);
   }
-
 }
 
 header {
@@ -22,7 +21,7 @@ header {
   margin-bottom: rem(24);
   gap: rem(24);
 
-  @include m {
+  @include l {
     flex-direction: row;
   }
 }
@@ -32,9 +31,11 @@ header {
     display: block;
     flex: none;
     width: var(--left-column-width);
-    border-radius: rem(8);
-    overflow: hidden;
     margin: 0 auto;
+
+    img {
+      border-radius: rem(8);
+    }
   }
 
   &__main-info {
@@ -54,7 +55,7 @@ header {
     flex-direction: column;
     gap: rem(24);
 
-    @include m {
+    @include l {
       flex-direction: row;
     }
 
