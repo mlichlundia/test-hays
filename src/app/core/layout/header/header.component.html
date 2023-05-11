@@ -1,5 +1,5 @@
 <header>
-  <a [routerLink]="['/']">
+  <a [routerLink]="['/']" aria-label="Go to main view">
     <app-logo></app-logo>
   </a>
   <app-secondary-button *ngIf="isBackShown" (click)="goBack()">Go back</app-secondary-button>

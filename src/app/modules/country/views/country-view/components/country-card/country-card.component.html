@@ -1,19 +1,32 @@
 <header class="card__header">
   <picture class="card__flag">
-    <source [src]="country.flags.svg" type="image/svg">
-    <img [src]="country.flags.png" [alt]="country.flags.alt" width="40" height="auto">
+    <source [srcset]="country.flags.svg" type="image/svg" />
+    <img
+      [src]="country.flags.png"
+      [alt]="country.flags.alt"
+      width="40"
+      height="auto"
+    />
   </picture>
-  <p class="card__code">{{country.cca2}}</p>
+  <p class="card__code">{{ country.cca2 }}</p>
 </header>
 <ul class="card__list">
-  <li class="card__point"><span>Official name:</span> {{country.name.official}}</li>
-  <li class="card__point"><span>Capital:</span> {{country.capital}}</li>
-  <li class="card__point"><span>Area:</span> {{country.area}}</li>
-  <li class="card__point"><span>Population:</span> {{country.population}}</li>
+  <li class="card__point">
+    <span>Official name:</span> {{ country.name.official }}
+  </li>
+  <li class="card__point"><span>Capital:</span> {{ country.capital }}</li>
+  <li class="card__point"><span>Area:</span> {{ country.area }}</li>
+  <li class="card__point"><span>Population:</span> {{ country.population }}</li>
   <li class="card__point">
     <span>Currencies:</span>
-    <p *ngFor="let currency of country.currencies">{{currency.name}} ({{currency.symbol}})</p>
+    <p *ngFor="let currency of country.currencies">
+      {{ currency.name }} ({{ currency.symbol }})
+    </p>
   </li>
-  <li class="card__point" [ngClass]="{card__point_positive: country.independent}">
-    <span>Independence:</span> {{country.independent ? '✓' : 'x'}}</li>
+  <li
+    class="card__point"
+    [ngClass]="{ card__point_positive: country.independent }"
+  >
+    <span>Independence:</span> {{ country.independent ? "✓" : "x" }}
+  </li>
 </ul>
