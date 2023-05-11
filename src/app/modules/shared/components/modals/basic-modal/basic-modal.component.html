@@ -1,0 +1,9 @@
+<div (click)="closeModal()" class="modal" *ngIf="modalService.modalState$ | async">
+  <div (click)="$event.stopPropagation()" class="modal__wrapper">
+    <div class="modal__content">
+      <ng-container *ngIf="modalService.activeModal === MODALS.profile">
+      </ng-container>
+    </div>
+    <app-secondary-button class="modal__close-button" (click)="closeModal()">✖</app-secondary-button>
+  </div>
+</div>
